@@ -200,7 +200,6 @@ a {
 }
 
 #mainpage {
-    height: 1270px;
     background: url(../images/Union.svg) #f7f7f7 no-repeat;
     background-size:auto;
     background-position-y: 75px;
@@ -460,4 +459,139 @@ h2 {
     font-size: 16px;
     color: #57984C;
     line-height: 142.7%;
+}
+
+#tomato_one_info {
+    background-color: #f7f7f7;
+}
+
+#return {
+    margin: 0;
+    padding-top: 10px;
+}
+
+#return a {
+    color: #57984C;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+#return a p {
+    padding-left: 15px;
+}
+
+#header_one {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+#header_one .logo img{
+    width: 166px;
+    height: 83px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content #tomato_one_info {
+    background: url(../images/Background_tomatoes.png) #f7f7f7 no-repeat;
+    background-position-y: -90px;
+    background-position-x: center;
+}
+
+#tomato_one_info h1 {
+    margin-top: 20px;
+    line-height: 142.7%;
+    color:#57984C;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+#tomato_one_info {
+    padding-bottom: 125px;
+}
+
+#tomato_one_info h1 span {
+    color:#324950;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+#quote {
+    align-items: center;
+    margin: 44px 0;
+    display: flex;
+}
+
+#quote p {
+    margin: 0 0 0 23px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #CF2333;
+}
+
+#img_tomato_ex {
+    margin-top: 20px;
+}
+
+.info_lists h5 {
+    font-weight: bold;
+    line-height: 142.7%;
+    font-size: 20px;
+    color: #57984C;
+    margin-bottom: 0;
+}
+
+.info_lists ul {
+    padding-left: 20px;
+}
+
+.info_lists ul li {
+    color:#324950;
+    font-size: 17px;
+    line-height: 162.7%;
+}
+
+.info_lists ul li::marker {
+    color:#57984C;
+}
+
+.info_lists hr {
+    border-top: 1px solid #57984C;
+    margin: 0;
+    display: inline-block;
+    width: 183px;
+    color:#57984C;
+}
+
+.wrapper .row .w-2:last-child .info_lists {
+    padding-left: 22px;
+}
+
+#downloadPDF {
+    display: flex;
+    background: url(../images/ico_pdf.png) no-repeat;
+    background-position-x: 30px;
+    background-position-y: 10px;
+    border: 2px solid #57984C;
+    width: 225px;
+    height: 55px;
+    border-radius: 30px;
+    justify-content: center;
+    margin: 30px 0 10px 0;
+    background-color: white;
+}
+
+#downloadPDF p {
+    margin: 10px 0 10px 40px;
+    color:#57984C;
+    font-size: 17px;
+    line-height: 200%;
+    font-weight: bold;
+}
+
+#img_pdf_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
