@@ -595,3 +595,115 @@ h2 {
     flex-direction: column;
     align-items: flex-end;
 }
+
+#contact_form {
+    background-color: #F7F7F7;
+    padding-bottom: 45px;
+}
+
+#contact_form form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact_form .w-2 {
+    width: 31.5%;
+    max-width: 482px;
+}
+
+form .w-2:last-child {
+    min-width: 635px;
+}
+
+#contact_form h1 {
+    margin: 0;
+    padding: 51px 0 40px;
+    line-height: 142.7%;
+    font-size: 44px;
+    font-weight: bold;
+    color: #324950;
+}
+
+#contact_form svg {
+    padding-bottom: 50px;
+}
+
+#contact_form input {
+    width: calc(100% - 6px);
+    height: 51px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+}
+
+#contact_form p {
+    color: #324950;
+    margin: 0;
+}
+
+#contact_form select {
+    width: 635px;
+    height: 55px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 10px 0 20px;
+}
+
+#contact_form textarea {
+    width: calc(100% - 6px);
+    height: 358px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+    resize: none;
+}
+
+#contact_form input[type="submit"] {
+    width: 255px;
+    height: 57px;
+    background-color: #57984C;
+    color: #FFFFFF;
+    line-height: 200%;
+    font-size: 17px;
+    border-radius: 30px;
+    margin: 23px 0 10px 0;
+    float: right;
+    cursor: pointer;
+}
+
+#contact_us_bg img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: -4px;
+}
+
+#our_address {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#our_address hr {
+    border-top: 1px solid #57984C;
+    margin: 0;
+    display: inline-block;
+    width: 183px;
+    color:#57984C;
+}
+
+#our_address p {
+    line-height: 150%;
+    font-size: 17px;
+}
+
+#our_address h6 {
+    color:#57984C;
+    line-height: 142.7%;
+    font-size: 20px;
+    margin: 45px 0 0 0;
+}
+
+#our_address a {
+    color:#57984C;
+}
