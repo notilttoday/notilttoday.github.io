@@ -1,0 +1,552 @@
+@media (max-width: 1220px) {
+    .wrapper {
+        max-width: calc(100% - 50px) !important;
+    }
+}
+
+@media (max-width: 1180px) {
+    .header .wrapper .row .w-2:first-child {
+        width: 25%;
+    }
+    #header_one .wrapper .row .w-2:first-child {
+        width: 25%;
+    }
+    .align-right.w-2 {
+        width: 75%;
+    }
+    #topfooter .wrapper {
+        justify-content: center;
+        flex-direction: column;
+    }
+    #topfooter {
+        height: auto;
+        padding-bottom: 10px;
+    }
+    #text {
+        padding-top: calc(15% - 30px);
+    }
+    #mainpage .w-2 img {
+        width: calc(100% - 30px);
+    }
+    .plant img {
+        width: calc(100% - 10px);
+    }
+    #categories ul {
+        padding: 0;
+    }
+    .examples {
+        justify-content: center;
+    }
+    #tomato_one_info h1 {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+    #tomato_one_info h1 span {
+        font-size: 45px;
+    }
+    #quote {
+        margin: 33px 0;
+    }
+    #quote p {
+        font-size: 27px;
+    }
+    #quote img {
+        width: 76px;
+    }
+    #img_tomato_ex img {
+        width: calc(100% - 50px);
+        float: right;
+    }
+    .info_lists h5 {
+        font-size: 17px;
+    }
+    .info_lists ul li {
+        color: #324950;
+        font-size: 15px;
+        line-height: 162.7%;
+    }
+    #downloadPDF p {
+        font-size: 16px;
+    }
+    #contact_form form {
+        flex-direction: column;
+    }
+    #contact_form .w-2 {
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+    }
+    #contact_form select {
+        width: 100%;
+    }
+    #contact_form input[type="submit"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #contact_form {
+        padding-bottom: 25px;
+    }
+}
+
+@media (max-width: 956px) {
+    #main_activities h2 {
+        text-align: center;
+        font-size: 46px;
+    }
+    #main_activities h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+    #main_activities .plant p {
+        text-align: center;
+        font-size: 14px;
+    }
+    .plant_list {
+        justify-content: center;
+    }
+    .footer ul li a {
+        font-size: 13px;
+    }
+    #botfooter p {
+        font-size: 12px;
+    }
+    #mainpage h2 {
+        font-size: 46px;
+    }
+    #mainpage p {
+        font-size: 17px;
+    }
+    #menu ul li a {
+        font-size: 16px;
+    }
+    #slider h1 {
+        font-size: 39px;
+    }
+    #slider a {
+        font-size: 14px;
+        width: 145px;
+        height: 50px;
+        line-height: 50px;
+    }
+    #categories ul li .text {
+        font-size: 13px;
+    }
+    #slider {
+        padding: 255px 0px;
+    }
+    #main_content h1 {
+        font-size: 38px;
+    }
+    #main_content p {
+        font-size: 15px;
+    }
+    #segments .w-3 h3 {
+        font-size: 21px;
+    }
+    #segments .w-3 p {
+        font-size: 13px;
+    }
+    .example img {
+        min-width: 310px;
+    }
+    .example h3 {
+        font-size: 18px;
+    }
+    #tomato_one_info h1 {
+        font-size: 36px;
+    }
+    #tomato_one_info h1 span {
+        font-size: 36px;
+    }
+    #quote {
+        margin: 28px 0;
+    }
+    #quote p {
+        font-size: 23px;
+    }
+    #quote img {
+        width: 66px;
+    }
+    .info_lists h5 {
+        font-size: 16px;
+    }
+    .info_lists ul li {
+        color: #324950;
+        font-size: 14px;
+        line-height: 162.7%;
+    }
+    #downloadPDF p {
+        font-size: 15px;
+        line-height: 240%;
+    }
+}
+
+@media (max-width: 780px) {
+    #menu {
+        text-align: right;
+    }
+    #menu:before {
+        content: "";
+        display: inline-block;
+        background-size: 100% 100%;
+        background-image: url(../images/menu.png);
+        width: 27px;
+        height: 27px;
+    }
+    #menu:active ul, #menu:hover ul {
+        display: block;
+    }
+    #menu ul {
+        position: absolute;
+        right: 10px;
+        top: 110px;
+        width: 60%;
+        height: 340px;
+        background-color: #fff;
+        display: none;
+        border: 1px solid #DADADA;
+        border-radius: 15px;
+    }
+    #menu ul li {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+    #menu ul li a{
+        width: calc(100% - 10px);
+        margin: 15px 0;
+        padding-right: 10px;
+        font-size: 25px;
+        display: block;
+        line-height: 150%;
+    }
+    .footer ul {
+        min-width: 100%;
+    }
+    #slider h1 {
+        padding: 0 15px;
+    }
+    #search {
+        width: calc(80% - 40px);
+    }
+    #slider {
+        padding: 180px 0px;
+    }
+    #segments .w-3 h3 {
+        font-size: 18px;
+    }
+    #segments .w-3 p {
+        font-size: 12px;
+    }
+    .example img {
+        min-width: 250px;
+    }
+    .example h3 {
+        font-size: 15px;
+    }
+    .example p {
+        font-size: 13px !important;
+    }
+    #main_content h1 {
+        font-size: 33px;
+    }
+    #main_content p {
+        font-size: 13px;
+    }
+    #tomato_one_info h1 {
+        margin-top: 10px;
+        font-size: 32px;
+    }
+    #tomato_one_info h1 span {
+        font-size: 32px;
+    }
+    #quote {
+        margin: 25px 0;
+    }
+    #quote p {
+        font-size: 21px;
+    }
+    #quote img {
+        width: 60px;
+    }
+    .info_lists h5 {
+        font-size: 15px;
+    }
+    .info_lists ul li {
+        color: #324950;
+        font-size: 13px;
+        line-height: 162.7%;
+    }
+    #downloadPDF p {
+        font-size: 14px;
+        line-height: 240%;
+    }
+}
+
+@media (max-width: 700px) {
+    #categories ul {
+        display: block;
+    }
+    #mainpage .w-2 {
+        width: 100%;
+        float: center;
+    }
+    #mainpage .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #mainpage .wrapper {
+        padding-top: 0;
+        text-align: center;
+    }
+    #mainpage #text {
+        padding-top: 30px;
+        padding-left: 0 !important;
+    }
+    #mainpage h2 {
+        font-size: 50px;
+    }
+    #mainpage p {
+        font-size: 17px;
+    }
+    #mainpage .w-2 img {
+        padding-top: 15px 0;
+        float: none !important;
+    }
+    #main_activities h2 {
+        font-size: 50px;
+        margin-top: 40px;
+    }
+    .plant_list {
+        flex-direction: column;
+    }
+    .plant img {
+        width: calc(100% - 13   0px);
+    }
+    #main_activities h3 {
+        font-size: 22px;
+    }
+    #main_activities .plant p {
+        font-size: 18px;
+    }
+    #main_content h1 {
+        text-align: center;
+        font-size: 26px;
+        padding-top: 30px;
+        line-height: 150%;
+    }
+    #main_content svg {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 40px;
+    }
+    #main_content p {
+        text-align: center;
+    }
+    #main_content .highlight-message p {
+        text-align: left;
+    }
+    #segments .w-3 {
+        width: 80%;
+    }
+    #segments .w-3 h3 {
+        text-align: center;
+        width: 100%;
+        display: flow-root;
+        font-size: 24px;
+    }
+    #segments .w-3 p {
+        font-size: 16px;
+    }
+    #segments .w-3 hr {
+        margin-left: auto;
+    }
+    #segments .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #tomato_one_info .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #tomato_one_info .w-2 {
+        width: 80%;
+    }
+    #tomato_one_info h1 {
+        text-align: center;
+        margin-top: 14px;
+        font-size: 40px;
+    }
+    #tomato_one_info .w-2 svg {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #tomato_one_info h1 span {
+        font-size: 40px;
+    }
+    #quote {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+    #quote p {
+        font-size: 28px;
+    }
+    #quote img {
+        width: 76px;
+    }
+    .info_lists h5 {
+        font-size: 20px;
+    }
+    .info_lists ul li {
+        font-size: 16px;
+    }
+    #downloadPDF p {
+        font-size: 16px;
+    }
+    #img_pdf_right {
+        align-items: center;
+        text-align: center;
+    }
+    #img_tomato_ex img {
+        float: none;
+    }
+    #tomato_one_info {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer ul li a {
+        font-size: 10px;
+    }
+    #botfooter p {
+        font-size: 9px;
+    }
+    #tomato_one_info h1 {
+        font-size: 29px;
+    }
+    #tomato_one_info h1 span {
+        font-size: 29px;
+    }
+    #quote p {
+        font-size: 20px;
+    }
+    #quote img {
+        width: 60px;
+    }
+    .info_lists h5 {
+        font-size: 17px;
+    }
+    .info_lists ul li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer ul {
+        align-items: center;
+        flex-direction: column;
+        margin: 8px 0;
+    }
+    .footer ul li {
+        padding: 5px 0;
+    }
+    .footer ul li a {
+        font-size: 13px;
+    }
+    .header .wrapper .row .w-2:first-child {
+        width: 100%;
+    }
+    .align-right.w-2 {
+        width: 100%;
+        text-align: left;
+    }
+    #slider {
+        padding: 135px 0px;
+        margin-top: -204px;
+    }
+    #mainlogo {
+        text-align: center;
+    }
+    .align-right.w-2 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    #search {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+    #menu {
+        width: 10%;
+        text-align: right;
+    }
+    #menu ul {
+        position: absolute;
+        right: 10px;
+        top: 170px;
+        width: 60%;
+        height: 305px;
+        background-color: #fff;
+        display: none;
+        border: 1px solid #DADADA;
+        border-radius: 15px;
+    }
+    #menu ul li a {
+        font-size: 22px;
+    }
+    .footer ul li {
+        margin-left: 0;
+    }
+    #tomato_all_slider img {
+        margin-top: 0;
+    }
+    #segments .w-3 h3 {
+        font-size: 18px;
+    }
+    #segments .w-3 p {
+        font-size: 12px;
+    }
+    #slider h1 {
+        font-size: 30px;
+    }
+    .logo {
+        text-align: center;
+    }
+    #tomato_one_info h1 {
+        font-size: 20px;
+    }
+    #tomato_one_info h1 span {
+        font-size: 20px;
+    }
+    #quote p {
+        font-size: 13px;
+    }
+    #quote {
+        margin: 15px 0;
+    }
+    #quote img {
+        width: 40px;
+    }
+    .info_lists h5 {
+        font-size: 17px;
+    }
+    .info_lists ul li {
+        font-size: 13px;
+    }
+    #header_one .wrapper .row .w-2:first-child {
+        width: 100%;
+    }
+    #contact_us_bg img {
+        margin-top: 0;
+    }
+    #our_address h6 {
+        margin: 25px 0 0 0;
+    }
+}
