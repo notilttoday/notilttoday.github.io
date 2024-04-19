@@ -475,6 +475,7 @@ h2 {
 
 #tomato_one_info {
     background-color: #f7f7f7;
+    padding-bottom: 60px;
 }
 
 #return {
@@ -519,10 +520,6 @@ h2 {
     font-size: 54px;
 }
 
-#tomato_one_info {
-    padding-bottom: 125px;
-}
-
 #tomato_one_info h1 span {
     color:#324950;
     font-weight: bold;
@@ -535,11 +532,15 @@ h2 {
     display: flex;
 }
 
+#quote img {
+    width: 76px;
+}
+
 #quote p {
     margin: 0 0 0 23px;
     font-weight: bold;
     font-size: 30px;
-    color: #CF2333;
+    color: #ff7300;
 }
 
 #img_tomato_ex {
@@ -549,31 +550,17 @@ h2 {
 .info_lists h5 {
     font-weight: bold;
     line-height: 142.7%;
-    font-size: 20px;
+    font-size: 26px;
     color: #57984C;
-    margin-bottom: 0;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.info_lists ul {
-    padding-left: 20px;
-}
-
-.info_lists ul li {
+.info_lists p {
     color:#324950;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 162.7%;
-}
-
-.info_lists ul li::marker {
-    color:#57984C;
-}
-
-.info_lists hr {
-    border-top: 1px solid #57984C;
-    margin: 0;
-    display: inline-block;
-    width: 183px;
-    color:#57984C;
+    text-align: justify;
 }
 
 .wrapper .row .w-2:last-child .info_lists {

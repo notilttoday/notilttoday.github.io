@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=320, initial-scale=1.0"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js" defer></script>
+    <script src="js/main.js" defer></script>
     <title>Tomato all</title>
 </head>
 <body>
@@ -131,7 +132,7 @@
                 </div>
             </div>
             <div class="examples">
-                <a class="example" href="'/tomato_one.html#'+carrot.id" v-for="carrot in products">
+                <a class="example" :href=" 'tomato_one.html#' + carrot.id " v-for="carrot in products">
                     <img :src="carrot.image" alt="Carrot img">
                     <div id="under_img">
                         <h3>{{carrot.title}}</h3>
@@ -169,6 +170,5 @@
             <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
         </div>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>

@@ -58,11 +58,11 @@
         float: right;
     }
     .info_lists h5 {
-        font-size: 17px;
+        font-size: 24px;
     }
-    .info_lists ul li {
-        color: #324950;
-        font-size: 15px;
+    .info_lists p {
+        color:#324950;
+        font-size: 17px;
         line-height: 162.7%;
     }
     #downloadPDF p {
@@ -168,11 +168,11 @@
         width: 66px;
     }
     .info_lists h5 {
-        font-size: 16px;
+        font-size: 22px;
     }
-    .info_lists ul li {
-        color: #324950;
-        font-size: 14px;
+    .info_lists p {
+        color:#324950;
+        font-size: 15px;
         line-height: 162.7%;
     }
     #downloadPDF p {
@@ -270,11 +270,11 @@
         width: 60px;
     }
     .info_lists h5 {
-        font-size: 15px;
+        font-size: 19px;
     }
-    .info_lists ul li {
-        color: #324950;
-        font-size: 13px;
+    .info_lists p {
+        color:#324950;
+        font-size: 14px;
         line-height: 162.7%;
     }
     #downloadPDF p {
@@ -399,10 +399,13 @@
         width: 76px;
     }
     .info_lists h5 {
-        font-size: 20px;
+        font-size: 23px;
+        margin-bottom: 25px;
     }
-    .info_lists ul li {
+    .info_lists p {
+        color:#324950;
         font-size: 16px;
+        line-height: 162.7%;
     }
     #downloadPDF p {
         font-size: 16px;
@@ -460,10 +463,12 @@
         width: 60px;
     }
     .info_lists h5 {
-        font-size: 17px;
+        font-size: 22px;
     }
-    .info_lists ul li {
-        font-size: 13px;
+    .info_lists p {
+        color:#324950;
+        font-size: 15px;
+        line-height: 162.7%;
     }
 }
 
@@ -556,10 +561,12 @@
         width: 40px;
     }
     .info_lists h5 {
-        font-size: 17px;
+        font-size: 21px;
     }
-    .info_lists ul li {
-        font-size: 13px;
+    .info_lists p {
+        color:#324950;
+        font-size: 14px;
+        line-height: 162.7%;
     }
     #header_one .wrapper .row .w-2:first-child {
         width: 100%;
