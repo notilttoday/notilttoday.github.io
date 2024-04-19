@@ -570,4 +570,10 @@
     #our_address h6 {
         margin: 25px 0 0 0;
     }
+    @media (max-width: 480px) {
+        .example #under_img {
+            width: 300px;
+            height: 70px;
+        }
+    }
 }

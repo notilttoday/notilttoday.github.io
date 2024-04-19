@@ -63,7 +63,7 @@ a {
 }
 
 .red-border-left p {
-    border-left: 4px solid #EB5757;
+    border-left: 4px solid #ff8400;
     padding: 1px 0 0 25px;
     display: table-cell;
     vertical-align: middle;
@@ -350,7 +350,7 @@ h2 {
     line-height: 150%;
     font-size: 17px;
     color: #324950;
-    background-color: #fcf0f0;
+    background-color: #ffedd9;
 }
 
 #main_content h1 {
@@ -429,6 +429,7 @@ h2 {
     margin: 0 auto;
     padding: 10px 0 20px;
     margin-top: 30px;
+    justify-content: center;
 }
 
 .example {
@@ -461,9 +462,15 @@ h2 {
 }
 
 .example p {
-    font-size: 16px;
+    font-size: 14px;
     color: #57984C;
     line-height: 142.7%;
+    padding: 0 6px;
+}
+
+.example #under_img {
+    width: 349px;
+    height: 100px;
 }
 
 #tomato_one_info {
