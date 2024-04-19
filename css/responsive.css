@@ -417,6 +417,27 @@
     #tomato_one_info {
         padding-bottom: 50px;
     }
+    .content #categories img[alt="wheat"] {
+        width: 40px;
+    }
+    .content #categories img[alt="watermelon"] {
+        width: 70px;
+    }
+    .content #categories img[alt="Clover"] {
+        width: 80px;
+    }
+    .content #categories img[alt="CSunflower"] {
+        width: 70px;
+    }
+    .content #categories img[alt="tomatoes"] {
+        width: 80px;
+    }
+    .content #categories img[alt="Eggplant"] {
+        width: 80px;
+    }
+    .content #categories img[alt="OSunflower"] {
+        width: 70px;
+    }
 }
 
 @media (max-width: 550px) {
