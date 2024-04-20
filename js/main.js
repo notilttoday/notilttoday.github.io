@@ -29,15 +29,17 @@ var app = new Vue ({
             if(window.localStorage.getItem('cart')) {
                 cart = window.localStorage.getItem('cart').split(', ');
             }
-
+        
             if(cart.indexOf(String(id))==-1) {
                 cart.push(id);
-                window.localStorage.setItem('cart',cart.join());
+                window.localStorage.setItem('cart',cart.join(', '));
                 this.btnVisible=1;
             }
         },
         checkInCart:function(){
-            if(this.product && this.product.id && window.localStorage.getItem('cart').split(', ').indexOf(String(this.product.id))!=-1) this.btnVisible=1;
+            if(this.product && this.product.id && window.localStorage.getItem('cart').split(', ').indexOf(String(this.product.id))!=-1) {
+                this.btnVisible=1;
+            }
         }
     }
 })
