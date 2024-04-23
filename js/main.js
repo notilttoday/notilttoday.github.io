@@ -7,11 +7,15 @@ var app = new Vue ({
         {id:4, title:"Danvers", short_text:'The classic American heirloom garden carrot', image:'../images/js_images/danvers-carrot.jpg', desc:"Danvers carrots, named after the region in Essex County, Massachusetts, where they originated, are renowned for their cheerful appearance, rich flavor, and satisfying crunch. These carrots typically reach lengths of about 6 to 8 inches, presenting a visually appealing sight in gardens and on dinner plates alike. One of the hallmark characteristics of Danvers carrots is their remarkable sweetness. Thanks to their rich flavor profile, they add a delightful sweetness to various culinary dishes, enhancing the overall taste experience. Whether enjoyed raw or cooked, Danvers carrots bring a burst of natural sweetness that is sure to please the palate. In addition to their exceptional flavor, Danvers carrots boast a slender core and a crunchy texture, adding depth and dimension to every bite. This distinctive crunch is not only satisfying to the senses but also contributes to the overall enjoyment of these carrots in a variety of culinary applications. Danvers carrots are prized for their versatility in the kitchen. Whether sliced into salads, roasted with herbs and spices, or used as a flavorful addition to soups and stews, these carrots lend themselves well to a wide range of dishes. Their vibrant orange hue and uniform shape make them a visually appealing ingredient that adds both flavor and aesthetic appeal to any meal. Despite their slender core, Danvers carrots are known for their resilience and adaptability. They thrive in a variety of growing conditions, making them a popular choice for home gardeners and commercial farmers alike. Whether planted in backyard gardens or cultivated on a larger scale, Danvers carrots consistently deliver on taste, texture, and overall quality. In summary, Danvers carrots are a testament to the rich agricultural heritage of Essex County, Massachusetts, where they first gained prominence. With their cheerful appearance, rich sweet flavor, slender core, and satisfying crunch, these carrots embody the essence of wholesome goodness and culinary excellence. Whether enjoyed fresh from the garden or incorporated into a favorite recipe, Danvers carrots are sure to leave a lasting impression on the taste buds."},
         {id:5, title:"Chantenay", short_text:'Popular French heirloom type of carrot', image:'../images/js_images/Chantenay-Carrot.png', desc:"Chantenay carrots, characterized by their unique shape and fine-grained texture, offer a delightful culinary experience that is both versatile and satisfying. These carrots typically exhibit a distinctive conical shape, tapering gradually from a broad top to a slender tip, reminiscent of a miniature garden gnome's hat. One of the defining features of Chantenay carrots is their fine-grained texture, which adds a delightful mouthfeel to a variety of dishes. However, it's important to note that if left to mature too long in the ground, these carrots can become overly fibrous, detracting from their overall appeal. Therefore, careful attention to harvesting timing is essential to ensure optimal flavor and texture. Chantenay carrots are prized for their versatility in the kitchen. While they can certainly be enjoyed raw as small carrots, they are more commonly used in cooked applications, where their natural sweetness and robust flavor shine. Whether roasted in the oven to caramelized perfection, added to hearty soups and stews for depth of flavor, or preserved through freezing or canning for future use, Chantenay carrots lend themselves beautifully to a wide range of culinary creations. Despite their smaller size compared to some other carrot varieties, Chantenay carrots pack a punch in both taste and nutritional value. Their vibrant orange hue hints at their rich flavor and nutritional content, making them a welcome addition to any meal. In summary, Chantenay carrots offer a delightful combination of fine-grained texture, robust flavor, and versatility in the kitchen. Whether enjoyed raw or cooked, these carrots add depth and dimension to a variety of culinary creations. With their unique shape and sweet flavor, Chantenay carrots are sure to delight the taste buds and elevate any dish they grace."}],
         product:{},
-        btnVisible: 0
+        btnVisible: 0,
+        cart: [],
+        contactFields: [],
+        formVisible: 1,
     },
     mounted:function(){
         this.getProduct();
         this.checkInCart();
+        this.getCart();
     },
     methods: {
         getProduct:function(){
@@ -40,6 +44,36 @@ var app = new Vue ({
             if(this.product && this.product.id && window.localStorage.getItem('cart').split(', ').indexOf(String(this.product.id))!=-1) {
                 this.btnVisible=1;
             }
+        },
+        getCart: function() {
+            var cartIds = [];
+            var storedCart = window.localStorage.getItem('cart');
+            if (storedCart) {
+                cartIds = storedCart.split(', ').map(id => parseInt(id));
+                this.cart = this.products.filter(product => cartIds.includes(product.id));
+            }
+        },
+        removeFromCart: function(id) {
+            var cart = [];
+            if (window.localStorage.getItem('cart')) {
+                cart = window.localStorage.getItem('cart').split(', ');
+            }
+            
+            var index = cart.indexOf(String(id));
+            
+            if (index !== -1) {
+                cart.splice(index, 1);
+                window.localStorage.setItem('cart', cart.join(', '));
+                this.cart = this.cart.filter(product => product.id !== id);
+            }
+        },
+        makeOrder: function() {
+            var orderedProducts = this.cart.map(product => product.title);
+            this.cart = [];
+            window.localStorage.removeItem('cart');
+        
+            this.formVisible = 0;
+            this.orderedProducts = orderedProducts;
         }
     }
 })

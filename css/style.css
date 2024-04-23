@@ -621,6 +621,7 @@ form .w-2:last-child {
     font-size: 44px;
     font-weight: bold;
     color: #324950;
+    height: 60px;
 }
 
 #contact_form svg {
@@ -705,4 +706,76 @@ form .w-2:last-child {
 
 #our_address a {
     color:#57984C;
+}
+
+#cart_list {
+    display: flex;
+    border: 1px solid #324950;
+    border-radius: 15px;
+    margin: 10px 0;
+    background-color: #ffedd9;
+    width: auto;
+    height: 170px;
+}
+
+#cart_list:first-child {
+    margin: 0px 0 10px 0;
+}
+
+#cart_list:last-child {
+    margin: 10px 0 25px 0;
+}
+
+#cart_list img {
+    width: 150px;
+    height: 150px;
+    padding: 10px 0 0 10px;
+    border-radius: 15px;
+}
+
+#cart_list a {
+    width: 40px;
+    height: 40px;
+    padding: 5px 5px 0 0;
+}
+
+#cart_list svg {
+    width: 40px;
+    height: 40px;
+}
+
+#cart_list h5 {
+    font-size: 22px;
+    color: #324950;
+    margin-top: 10px;
+}
+
+#cart_list p {
+    font-size: 18px;
+    color: #324950;
+}
+
+#cart_list #cart_describe {
+    width: 85%;
+    text-align: center;
+}
+
+#under_form h6 {
+    font-size: 22px;
+    color: #324950;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#under_form h5 {
+    font-size: 20px;
+    color: #324950;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#under_form p {
+    font-size: 17px;
+    color: #324950;
+    margin: 10px 0;
 }
