@@ -2,7 +2,7 @@ import { router } from './router.js';
 // import { header } from './widgets/header.js';
 // import { search } from './widgets/search.js';
 // import { popup } from './widgets/popup.js';
-// import { msg } from './widgets/msg.js';
+import { msg } from './widgets/msg.js';
 // import { toogle } from './widgets/toogle.js';
 // import { img } from './widgets/img.js';
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const main = {
         data() {
             return {
-                url: "",
+                url: "https://affiliate.yanbasok.com",
                 user: {name:"", phone:"", email:"", date:"", auth:""},
                 formData: {},
                 title: "",
@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             self.page('/statistics');
                         } else if (['/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type == 'admin') {
                             self.page('/campaigns');
-                        } else if (['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type == 'admin') {
+                        } else if (['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])) {
                             self.page();
-                        } else if (!['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type == 'admin') {
+                        } else if (!['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])) {
                             self.page();
                         }
                     } else {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // .component('Header', header)
     // .component('popup', popup)
     // .component('search', search)
-    // .component('msg', msg)
+    .component('msg', msg)
     // .component('toogle', toogle)
     // .component('Image', img)
     .use(router)
