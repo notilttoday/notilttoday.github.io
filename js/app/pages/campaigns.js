@@ -98,9 +98,27 @@ export const campaigns = {
                     </div>
                     <div class="w20 ptb20 ac panel"><input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" /></div>
                     <div class="w20 al ptb20 panel">
-                        (New +)
+                        <a class="btnS" href="#" @click.prevent="parent.formData={}; $refs.new.active=1"><i class="fas fa-plus"></i> New</a>
                     </div>
                 </div>
+                <popup ref="new" :title="(parent.formData && parent.formData.id) ? 'Edit campaign' : 'New campaign'">
+                    <div class="form new-camp-form">
+                        <form @submit.prevent="action()" v-if="parent.formData">
+                            <div class="row">
+                                <label>
+                                    Name
+                                    <input type="text" v-model="parent.formData.title" required>
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <button class="btn" v-if="parent.formData && parent.formData.id">EDIT</button>
+                                <button class="btn" v-if="parent.formData && !parent.formData.id">ADD</button>
+                            </div>
+                        </form>
+                    </div>
+                </popup>
+
 
                 <div class="table" v-if="data.items != ''">
                     <table>
@@ -119,7 +137,9 @@ export const campaigns = {
                         <tbody>
                             <tr v-for="(item, i) in data.items">
                                 <td class="id">{{item.id}}</td>
-                                <td class="id">(Toggle) </td>
+                                <td class="id">
+                                    <toogle v-model="item.published" @update:modelValue="parent.formData = item; action();" />
+                                </td>
                                 <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>
                                 <td class="id">
                                     <a href="#" @click.prevent="$refs.details.active=1; getDetails(item.id, 1)">
