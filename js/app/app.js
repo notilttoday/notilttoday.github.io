@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             logout() {
                 this.user = {name:"", phone:"", email:"", date:"", auth:""};
                 this.page('/');
-                window.localStorage.getItem('user', '');
+                window.localStorage.setItem('user', '');
             },
 
             page:function(path = "") {
