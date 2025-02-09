@@ -13,15 +13,15 @@ export const user = {
         } 
     },
     mounted: function(){ 
-        this.parent = this. $parent.$parent;
+        this.parent = this.$parent.$parent;
 
         if(!this.parent.user) { 
-        this.parent.logout(); 
+            this.parent.logout(); 
         } 
 
         if(!this.parent.$route.params.id) this.parent.page('/users'); 
         this.get(); 
-        this.GetFirstAndLastDate(); 
+        this.GetFirstAndLastDate();
     },
     methods: {
         GetFirstAndLastDate:function() {
@@ -37,11 +37,11 @@ export const user = {
             var self = this; 
             var data = self.parent.toFormData(self.parent.formData);
 
-            data.append('id',this.parent.$route.params.id); 
-            data.append('uid',this.parent.$route.params.id); 
+            data.append('id', this.parent.$route.params.id); 
+            data.append('uid', this.parent.$route.params.id); 
 
-            if(this.date != "") data.append('date', this.date); 
-            if(this.date2 != "") data.append('date2',this.date2);
+            if (this.date != "") data.append('date', this.date); 
+            if (this.date2 != "") data.append('date2', this.date2);
 
             self.loader = 1; 
             axios.post(this.parent.url + "/site/getUser?auth=" + this.parent.user.auth, data).then(function(response) { 
@@ -59,7 +59,7 @@ export const user = {
 
             axios.post(this.parent.url + "/site/actionUser?auth=" + this.parent.user.auth, data).then(function(response) {
                 if (response.data.error) {
-                    self.$refs.header.$refs.msg.alertFun(response.data.erroг);
+                    self.$refs.header.$refs.msg.alertFun(response.data.error);
                     return false;
                 } else {
                     self.$refs.new.active = 0; 
@@ -83,10 +83,10 @@ export const user = {
 
                 axios.post(this.parent.url + "/site/deleteUser?auth=" + this.parent.user.auth, data).then(function(response) {
                     if (response.data.error) {
-                        self.$refs.header.$refs.msg.alertFun(response.data.erroг);
+                        self.$refs.header.$refs.msg.alertFun(response.data.erro);
                         return false;
                     } else {
-                        self.srefs.header.$refs.msg.successFun ("Successfully deleted add!"); 
+                        self.$refs.header.$refs.msg.successFun("Successfully deleted add!"); 
                         self.get(); 
                     }
                 }).catch(function(error) { 
@@ -98,7 +98,7 @@ export const user = {
             var self = this; 
             var data = self.parent.toFormData(self.parent.formData);
 
-            data.append('uid',this.parent.$route.params.id);
+            data.append('uid', this.parent.$route.params.id);
 
             axios.post(this.parent.url + "/site/actionStatistic?auth=" + this.parent.user.auth, data).then(function(response){ 
                 if (response.data.error) { 
@@ -149,10 +149,10 @@ export const user = {
 
                 axios.post(this.parent.url + "/site/deletePayment?auth=" + this.parent.user.auth, data).then(function(response) {
                     if (response.data.error) {
-                        self.$refs.header.$refs.msg.alertFun(response.data.erroг);
+                        self.$refs.header.$refs.msg.alertFun(response.data.error);
                         return false;
                     } else {
-                        self.Srefs.header.$refs.msg.successFun("Successfully deleted add!"); 
+                        self.$refs.header.$refs.msg.successFun("Successfully deleted add!"); 
                         self.get(); 
                     }
                 }).catch(function(error) {
@@ -164,7 +164,7 @@ export const user = {
             var self = this;
             var data = self.parent.toFormData(self.parent.formData);
 
-            axios.post(this.parent.url + "/site/actionSite?auth="+this.parent.user.auth, data).then(function(response) { 
+            axios.post(this.parent.url + "/site/actionSite?auth=" + this.parent.user.auth, data).then(function(response) { 
                 //self.$refs.new.active = 0; 
                 if (self.parent.formData.id) { 
                     self.$refs.header.$refs.msg.successFun("Successfully updated site!"); 
@@ -194,6 +194,8 @@ export const user = {
                     }
                 }
 
+                console.log(document.getElementById('chartOuter'));
+
                 document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div></div><canvas id="myChart"></canvas>';
                 const ctx = document.getElementById('myChart');
                 const xScaleImage = {
@@ -207,7 +209,7 @@ export const user = {
 
                             const width = 120;
                             ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
-                        })
+                        });
                     }
                 }
                 new Chart(ctx, {
@@ -221,7 +223,7 @@ export const user = {
                                 label: "Clicks",
                                 backgroundColor: "#00599D",
                                 borderColor: "#00599D",
-                                data: clicks
+                                data: clicks,
                             },
                             {
                                 label: "Views",
@@ -283,10 +285,10 @@ export const user = {
                         </div>
                     </div>
                     <div class="flex user-info" v-if="data && data.info">
-                        <div class="">
+                        <div>
                             <p><b>Phone:</b> {{data.info.phone}}</p>
                         </div>
-                        <div class="">
+                        <div>
                             <p><b>Email:</b> {{data.info.email}}</p>
                         </div>
                     </div>
@@ -354,19 +356,19 @@ export const user = {
                                 <div class="flex cubes">
                                     <div class="w30 clicks">
                                         <div>Clicks</div>
-                                        <div class="chart-data">{{data.items[iChart].clicks}}</div>
+                                        <div class="chart-data">{{data.sites[iChart].clicks}}</div>
                                     </div>
                                     <div class="w30 views">
                                         <div>Views</div>
-                                        <div class="chart-data">{{data.items[iChart].views}}</div>
+                                        <div class="chart-data">{{data.sites[iChart].views}}</div>
                                     </div>
                                     <div class="w30 leads">
                                         <div>Leads</div>
-                                        <div class="chart-data">{{data.items[iChart].leads}}</div>
+                                        <div class="chart-data">{{data.sites[iChart].leads}}</div>
                                     </div>
                                     <div class="w30 ctr">
                                         <div>CTR</div>
-                                        <div class="chart-data">{{(data.items[iChart].clicks * 100 / data.items[iChart].views).toFixed(2)}}%</div>
+                                        <div class="chart-data">{{(data.sites[iChart].clicks * 100 / data.sites[iChart].views).toFixed(2)}}%</div>
                                     </div>
                                 </div>
                             </div>
@@ -504,7 +506,7 @@ export const user = {
                                         {{item.description}}
                                     </td>
                                     <td class="actions">
-                                        <a href="#" @click.prevent="parent.formData = item; $refs.chart.active = 1;">
+                                        <a href="#" @click.prevent="parent.formData = item; $refs.payment.active = 1;">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                         <a href="#" @click.prevent="parent.formData = item; delPayment();">

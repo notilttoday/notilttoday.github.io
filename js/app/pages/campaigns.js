@@ -119,7 +119,7 @@ export const campaigns = {
 
                             const width = 120;
                             ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
-                        })
+                        });
                     }
                 }
                 new Chart(ctx, {
