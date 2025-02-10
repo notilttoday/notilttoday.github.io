@@ -1030,3 +1030,107 @@ textarea {
     max-width: 500px;
     background-color: #f2f6f8;
 }
+
+.empty {
+    text-align: end;
+}
+
+.statistics-table th:nth-child(8), .statistics-table td:nth-child(8) {
+    width: 5%;
+    text-align: center;
+}
+.statistics-table th:nth-child(7), .statistics-table td:nth-child(7) {
+    width: 5%;
+    text-align: center;
+}
+.statistics-table th:nth-child(6), .statistics-table td:nth-child(6) {
+    width: 5%;
+    text-align: center;
+}
+.statistics-table th:nth-child(5), .statistics-table td:nth-child(5) {
+    width: 5%;
+    text-align: center;
+}
+.statistics-table th:nth-child(4), .statistics-table td:nth-child(4) {
+    width: 50%;
+    text-align: right;
+}
+.statistics-table th:nth-child(3), .statistics-table td:nth-child(3) {
+    width: 15%;
+    text-align: right;
+}
+.statistics-table th:nth-child(2), .statistics-table td:nth-child(2) {
+    width: 10%;
+    text-align: center;
+}
+.statistics-table th:nth-child(1), .statistics-table td:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+.ads-table th:nth-child(5), .ads-table td:nth-child(5) {
+    width: 10%;
+    text-align: center;
+}
+.ads-table th:nth-child(4), .ads-table td:nth-child(4) {
+    width: 65%;
+    text-align: right;
+}
+.ads-table th:nth-child(3), .ads-table td:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}
+.ads-table th:nth-child(2), .ads-table td:nth-child(2) {
+    width: 10%;
+    text-align: center;
+}
+.ads-table th:nth-child(1), .ads-table td:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+.table {
+    padding-bottom: 50px;
+}
+
+.sites-table th:nth-child(6), .sites-table td:nth-child(6) {
+    width: 15%;
+    text-align: center;
+}
+.sites-table th:nth-child(5), .sites-table td:nth-child(5) {
+    width: 15%;
+    text-align: center;
+}
+.sites-table th:nth-child(4), .sites-table td:nth-child(4) {
+    width: 15%;
+    text-align: center;
+}
+.sites-table th:nth-child(3), .sites-table td:nth-child(3) {
+    width: 15%;
+    text-align: center;
+}
+.sites-table th:nth-child(2), .sites-table td:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+.sites-table th:nth-child(1), .sites-table td:nth-child(1) {
+    width: 15%;
+    text-align: center;
+}
+
+.payments-table th:nth-child(4), .payments-table td:nth-child(4) {
+    width: 42%;
+    text-align: right;
+}
+.payments-table th:nth-child(3), .payments-table td:nth-child(3) {
+    width: 42%;
+    text-align: right;
+}
+.payments-table th:nth-child(2), .payments-table td:nth-child(2) {
+    width: 8%;
+    text-align: center;
+}
+.payments-table th:nth-child(1), .payments-table td:nth-child(1) {
+    width: 8%;
+    text-align: center;
+}
