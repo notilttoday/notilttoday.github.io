@@ -54,7 +54,7 @@ export const statistics = {
         },
         actionStatistic:function() {
             var self = this;
-            var data = self.parent.toFormData(self.response.formData);
+            var data = self.parent.toFormData(self.parent.formData);
 
             data.append('uid', this.parent.user.id);
 
