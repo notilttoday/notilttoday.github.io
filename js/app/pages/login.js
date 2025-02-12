@@ -37,7 +37,7 @@ export const login = {
     template: `
         <div class="flex page">
             <msg ref="msg"/>
-            <div id="right-area" class="w40">
+            <div id="right-area">
                 <div class="header">
                     <div class="wrapper flex">
                         <div class="logo">
@@ -73,7 +73,7 @@ export const login = {
                 </div>
             </div>
             
-            <div id="left-area" class="w60">
+            <div id="left-area">
                 <img :src="parent.url+'/app/views/images/Cover_'+img+'.jpg'" />
             </div>
         </div>

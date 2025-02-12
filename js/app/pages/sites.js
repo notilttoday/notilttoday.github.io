@@ -69,10 +69,10 @@ export const sites = {
             <div id="spinner" v-if="loader"></div>
             <div class="wrapper">
                 <div class="camp-flex">
-                    <div class="w20 ptb30 ar">
+                    <div class="ptb30 ar">
                         <h1>Sites</h1>
                     </div>
-                    <div class="w60 ptb20 ac">
+                    <div class="ptb20 ac">
                         <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
                     </div>
                     <div class="w20 ar ptb20">
@@ -96,45 +96,47 @@ export const sites = {
                     </div>
                 </popup>
 
-                <div class="table sites-table" v-if="data.items != ''">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="id"></th>
-                                <th class="image">Site</th>
-                                <th class="id">Views</th>
-                                <th class="id">Clicks</th>
-                                <th class="id">Leads</th>
-                                <th class="id">Fraud clicks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in data.items">
-                                <td class="id"><toogle v-model="item.published" @update:modelValue="item.published = $event; parent.formData = item; action();" /></td>
-                                <td class="image">
-                                    {{item.site}}
-                                </td>
-                                <td class="id">
-                                    {{item.views}}
-                                </td>
-                                <td class="id">
-                                    <template v-if="item.clicks">{{item.clicks}}</template>
-                                    <template v-if="!item.clicks">0</template>
-                                </td>
-                                <td class="id">
-                                    <template v-if="item.leads">{{item.leads}}</template>
-                                    <template v-if="!item.leads">0</template>
-                                </td>
-                                <td class="id">
-                                    <template v-if="item.fclicks">{{item.fclicks}}</template>
-                                    <template v-if="!item.fclicks">0</template>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="empty" v-if="data.items == ''">
-                    No items
+                <div class="table-container">
+                    <div class="table sites-table" v-if="data.items != ''">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="id"></th>
+                                    <th class="image">Site</th>
+                                    <th class="id">Views</th>
+                                    <th class="id">Clicks</th>
+                                    <th class="id">Leads</th>
+                                    <th class="id">Fraud clicks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in data.items">
+                                    <td class="id"><toogle v-model="item.published" @update:modelValue="item.published = $event; parent.formData = item; action();" /></td>
+                                    <td class="image">
+                                        {{item.site}}
+                                    </td>
+                                    <td class="id">
+                                        {{item.views}}
+                                    </td>
+                                    <td class="id">
+                                        <template v-if="item.clicks">{{item.clicks}}</template>
+                                        <template v-if="!item.clicks">0</template>
+                                    </td>
+                                    <td class="id">
+                                        <template v-if="item.leads">{{item.leads}}</template>
+                                        <template v-if="!item.leads">0</template>
+                                    </td>
+                                    <td class="id">
+                                        <template v-if="item.fclicks">{{item.fclicks}}</template>
+                                        <template v-if="!item.fclicks">0</template>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="empty" v-if="data.items == ''">
+                        No items
+                    </div>
                 </div>
             </div>
         </div>

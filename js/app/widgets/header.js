@@ -31,6 +31,7 @@ export const header = {
                     </div>
                     <div class="w70 h-inh">
                         <div id="menu">
+                            <i class="fas fa-bars" @click="menu=1"></i>
                             <ul :class="{active:menu == 1}" v-if="parent.user && parent.user.type && parent.user.type=='admin'">
                                 <li v-if="menu==1" class="al"><i class="fas fa-times" @click="menu=0"></i></li>
                                 <li><router-link :class="{'router-link-active':$route.path.search('campaign')==1}" to="/campaigns"><p>Campaigns <i class="fas fa-bullhorn"></i></p></li>

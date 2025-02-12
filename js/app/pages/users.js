@@ -92,11 +92,11 @@ export const users = {
             <div id="spinner" v-if="loader"></div>
             <div class="wrapper">
                 <div class="flex camp-flex">
-                    <div class="w10 ptb30">
+                    <div class="ptb10">
                         <h1>Users</h1>
                     </div>
                     <div class="w70"><search /></div>
-                    <div class="w20 al ptb20">
+                    <div class="al ptb20">
                         <a class="btnS" href="#" @click.prevent="parent.formData={}; $refs.new.active=1"><i class="fas fa-plus"></i> New</a>
                     </div>
                 </div>
@@ -163,44 +163,46 @@ export const users = {
                     </div>
                 </popup>
 
-                <div class="table" id="users-table" v-if="data.items != ''">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="id">#</th>
-                                <th class="id"></th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th class="actions">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(item, i) in data.items">
-                                <td class="id">{{item.id}}</td>
-                                <td>
-                                    <toogle :modelValue="item.published" @update:modelValue="item.published = $event; parent.formData = item; action()" />
-                                </td>
-                                <td><router-link :to="'/user/' + item.id">{{item.user}}</router-link></td>
-                                <td>{{item.phone}}</td>
-                                <td>{{item.email}}</td>
-                                <td class="actions">
-                                    <router-link :to="'/user/' + item.id">
-                                        <i class="fas fa-edit"></i>
-                                    </router-link>
-                                    <a href="#" @click.prevent="parent.formData.copy = item.multi; uid=i; $refs.copy.active=1;">
-                                        <i class="fas fa-images"></i>
-                                    </a>
-                                    <a href="#" @click.prevent="parent.formData = item; del();">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="empty" v-if="data.items == ''">
-                    No items
+                <div class="table-container">
+                    <div class="table" id="users-table" v-if="data.items != ''">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="id">#</th>
+                                    <th class="id"></th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th class="actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item, i) in data.items">
+                                    <td class="id">{{item.id}}</td>
+                                    <td>
+                                        <toogle :modelValue="item.published" @update:modelValue="item.published = $event; parent.formData = item; action()" />
+                                    </td>
+                                    <td><router-link :to="'/user/' + item.id">{{item.user}}</router-link></td>
+                                    <td>{{item.phone}}</td>
+                                    <td>{{item.email}}</td>
+                                    <td class="actions">
+                                        <router-link :to="'/user/' + item.id">
+                                            <i class="fas fa-edit"></i>
+                                        </router-link>
+                                        <a href="#" @click.prevent="parent.formData.copy = item.multi; uid=i; $refs.copy.active=1;">
+                                            <i class="fas fa-images"></i>
+                                        </a>
+                                        <a href="#" @click.prevent="parent.formData = item; del();">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="empty" v-if="data.items == ''">
+                        No items
+                    </div>
                 </div>
             </div>
         </div>
