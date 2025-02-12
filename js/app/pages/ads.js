@@ -36,7 +36,7 @@ export const ads = {
             if (navigator && navigator.clipboard) {
                 await navigator.clipboard.writeText(text);
                 this.$refs.header.$refs.msg.successFun("Successfully copied!");
-                this.$refs.copu.active = 0;
+                this.$refs.copy.active = 0;
             } else {
                 this.$refs.header.$refs.msg.alertFun("Use https!");
             }
@@ -54,6 +54,13 @@ export const ads = {
                     <div class="w70"></div>
                     <div class="w20 al ptb20"></div>
                 </div>
+
+                <popup ref="img" title="Banner">
+                    <div class="ac">
+                        <img :src="parent.url + '/' + parent.formData.img" v-if="parent.formData.img" />
+                    </div>
+                </popup>
+
                 <popup ref="copy" :title="'Copy banner'">
                     <div class="form new-camp-form">
                         <form v-if="parent.formData">
@@ -85,7 +92,7 @@ export const ads = {
                             <tr v-for="item in data.items">
                                 <td class="id">{{item.id}}</td>
                                 <td class="image">
-                                    <a href="#" @click.prevent="parent.formData = item; $refs.new.active = 1;">
+                                    <a href="#" @click.prevent="parent.formData = item; $refs.img.active = 1;">
                                         <img :src="parent.url + '/' + item.img" />
                                     </a>
                                 </td>
